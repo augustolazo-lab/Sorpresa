@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Allison, ¿quieres ser mi San Valentín?</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #333;
+    overflow: hidden;
+  }
+  .card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-width: 500px;
+    position: relative;
+  }
+  h1 { font-size: 2em; }
+  p { font-size: 1.2em; }
+  button {
+    margin: 15px;
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  .yes { background-color: #ff6b81; color: white; }
+  .no { background-color: #ddd; position: absolute; }
+  #respuesta {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #ff4d6d;
+  }
+  iframe { margin-top: 20px; border-radius: 12px; }
+</style>
+</head>
+<body>
+  <div class="card" id="card">
+    <h1>Allison 💖</h1>
+    <p>Quería preguntarte algo especial...</p>
+    <h2>¿Quieres ser mi San Valentín? 🌹</h2>
+
+    <button class="yes" onclick="responderSi()">Sí</button>
+    <button class="no" id="noBtn" onmouseover="moverBoton()">No</button>
+
+    <div id="respuesta"></div>
+
+    <!-- Música romántica -->
+    <iframe width="100%" height="80" 
+      src="https://www.youtube.com/embed/E0t0rI-GiR4?autoplay=1&loop=1&playlist=E0t0rI-GiR4" 
+      title="How Deep Is Your Love" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+<script>
+function responderSi() {
+  document.getElementById("respuesta").textContent = "¡Sabía que dirías que sí! ❤️";
+}
+
+function moverBoton() {
+  const boton = document.getElementById("noBtn");
+  const card = document.getElementById("card");
+
+  const maxX = card.clientWidth - boton.offsetWidth;
+  const maxY = card.clientHeight - boton.offsetHeight;
+
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  boton.style.left = randomX + "px";
+  boton.style.top = randomY + "px";
+}
+</script>
+</body>
+</html>
