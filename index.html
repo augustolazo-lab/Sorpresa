@@ -8,11 +8,11 @@
   body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    /* Fondo con ositos Bubu y Dudu */
-    background-color: #ffdce2;
-    background-image: url("https://i.imgur.com/7yUvePI.png"), url("https://i.imgur.com/7yUvePI.png");
-    background-size: 120px, 120px;
-    background-position: 0 0, 60px 60px;
+    /* Fondo con los ositos */
+    /* Fondo con los ositos repetidos */
+    background-image: url("https://bubuydudu.es/wp-content/uploads/2025/10/bubududu.jpg");
+    background-repeat: repeat;
+    background-size: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@
     overflow: hidden;
   }
   .card {
-    background: white;
+    background: rgba(255,255,255,0.9);
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -57,7 +57,7 @@
 </head>
 <body>
   <div class="card" id="card">
-    <h1>Allison 💖</h1>
+    <h1>Allison Palencia 💖</h1>
     <p>Quería preguntarte algo especial...</p>
     <h2>¿Quieres ser mi San Valentín? 🌹</h2>
 
@@ -69,7 +69,7 @@
 
 <script>
 function responderSi() {
-  document.getElementById("respuesta").textContent = "¡Sabía que dirías que sí! ❤️";
+  document.getElementById("respuesta").textContent = "¡Yeihhh, Bubu está feliz! ❤️";
 }
 
 function moverBoton() {
